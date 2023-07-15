@@ -1,19 +1,20 @@
 // // * eslint-disable @next/next/no-img-element */
 // import React, { useEffect, useState } from 'react';
-// import { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 // import { viewBookDetails } from '../../api/mergedData';
 
-// export default function ViewAuthor() {
-//   const [authorDetails, setAuthorDetails] = useState({});
-//   const router = useRouter();
+export default function ViewAuthor() {
+  // const [authorDetails, setAuthorDetails] = useState({});
+  const router = useRouter();
 
-//   // TODO: grab firebaseKey from url
-//   const { firebaseKey } = router.query;
+  // TODO: grab firebaseKey from url
+  const { firebaseKey } = router.query;
+  console.warn(firebaseKey);
 
-//   // // TODO: make call to API layer to get the data
-//   // useEffect(() => {
-//   //   viewBookDetails(firebaseKey).then(setBookDetails);
-//   // }, [firebaseKey]);
+  //   // // TODO: make call to API layer to get the data
+  //   // useEffect(() => {
+  //   //   viewBookDetails(firebaseKey).then(setBookDetails);
+  //   // }, [firebaseKey]);
 
 //   // return (
 //   //   <div className="mt-5 d-flex flex-wrap">
@@ -36,4 +37,4 @@
 //   //     </div>
 //   //   </div>
 //   // );
-// }
+}
