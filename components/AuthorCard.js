@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { deleteSingleAuthor } from '../api/authorData';
 
 function AuthorCard({ authorObj, onUpdate }) {
-  console.warn({ authorObj });
+  // console.warn({ authorObj });
   // FOR DELETE, WE NEED TO REMOVE THE AUTHOR AND HAVE THE VIEW RERENDER,
   // SO WE PASS THE FUNCTION FROM THE PARENT THAT GETS THE AUTHORS
   const deleteThisAuthor = () => {

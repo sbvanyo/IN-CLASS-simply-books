@@ -4,7 +4,7 @@ import AuthorCard from '../../components/AuthorCard';
 import { getAuthors } from '../../api/authorData';
 
 function Authors() {
-  // TODO: Set a state for books
+  // TODO: Set a state for authors
   const [authors, setAuthors] = useState([]);
 
   // TODO: Get user ID using useAuth Hook
@@ -18,7 +18,7 @@ function Authors() {
   // TODO: make the call to the API to get all the authors on component render
   useEffect(() => {
     getAllTheAuthors();
-  }, []);
+  });
 
   return (
     <div className="text-center my-4">
