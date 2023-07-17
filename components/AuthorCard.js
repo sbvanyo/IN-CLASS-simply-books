@@ -10,14 +10,14 @@ function AuthorCard({ authorObj, onUpdate }) {
   // FOR DELETE, WE NEED TO REMOVE THE AUTHOR AND HAVE THE VIEW RERENDER,
   // SO WE PASS THE FUNCTION FROM THE PARENT THAT GETS THE AUTHORS
   const deleteThisAuthor = () => {
-    if (window.confirm(`Delete ${authorObj.first_name + authorObj.last_name}?`)) {
+    if (window.confirm(`Delete ${authorObj.first_name} ${authorObj.last_name}?`)) {
       deleteSingleAuthor(authorObj.firebaseKey).then(() => onUpdate());
     }
   };
 
   return (
     <Card style={{ width: '18rem', margin: '10px' }}>
-      <Card.Img variant="top" src={authorObj.image} alt={authorObj.first_name} {...authorObj.last_name} style={{ height: '400px' }} />
+      <Card.Img variant="top" src={authorObj.image} alt={authorObj.first_name + authorObj.last_name} style={{ height: '400px' }} />
       <Card.Body>
         <Card.Title>{authorObj.first_name} {authorObj.last_name}</Card.Title>
         <p className="card-text bold">{authorObj.favorite && <span>Favorite<br /></span> }</p>
