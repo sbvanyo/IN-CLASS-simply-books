@@ -29,7 +29,7 @@ function Home() {
         <Button>Add A Book</Button>
       </Link>
       <div className="d-flex flex-wrap">
-        {/* TODO: map over books here using BookCard component */}
+        {/* TODO: map over books here using BookCard component. Returns a BookCard component for every item mapped over */}
         {books.map((book) => (
           <BookCard key={book.firebaseKey} bookObj={book} onUpdate={getAllTheBooks} />
         ))}
